@@ -44,12 +44,12 @@ fun CounterScreen(modifier: Modifier) {
         //the row that contains the two button to put them side by side horizontally
         Row {
             //the button that subtracts from the counter, it's handled in high order function
-            Button(onClick = {counter--}, shape = RoundedCornerShape(16.dp), modifier = Modifier.weight(1f).height(100.dp)) {
+            Button(onClick = {if(counter>0)counter--}, shape = RoundedCornerShape(16.dp), modifier = Modifier.weight(1f).height(100.dp)) {
                 Text(text = "-", fontSize = 55.sp)
             }
             //the button that adds to the counter, it's handled in high order function
             Spacer(modifier = Modifier.size(16.dp))
-            Button(onClick = {counter++}, shape = RoundedCornerShape(16.dp), modifier = Modifier.weight(1f).height(100.dp)) {
+            Button(onClick = { counter++}, shape = RoundedCornerShape(16.dp), modifier = Modifier.weight(1f).height(100.dp)) {
                 Text(text = "+", fontSize = 55.sp)
 
             }
